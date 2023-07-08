@@ -72,7 +72,7 @@
 
 # SEARCH
 /postgres/restaurant/search.http.post:
-  summary: Fetch multiple Restaurant
+  summary: Fetch multiple Restaurants
   description: Fetch multiple Restaurant from database
   fn: com.biz.postgres.restaurant.search
   body:
