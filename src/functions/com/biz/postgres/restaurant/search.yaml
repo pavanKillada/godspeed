@@ -4,6 +4,14 @@ tasks:
     fn: com.gs.datastore
     args:
       datasource: postgres
-      data: <% inputs.body %>
+      data:
+        where:
+          location: <% inputs.body.city %>
+        include:
+          menuItems:
+            where:
+              couponCode:
+                equals: <% inputs.body.coupon %>
       config:
         method: Restaurant.findMany
+

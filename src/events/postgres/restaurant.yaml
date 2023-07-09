@@ -79,7 +79,7 @@
     content:
       application/json:
         schema:
-          type: object
+          $ref: "#/definitions/postgres/RestaurantSearch"
   responses:
     content:
       application/json:

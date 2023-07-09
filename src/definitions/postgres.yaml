@@ -36,6 +36,13 @@ Restaurant:
       nullable: true
     location:
       type: string
+RestaurantSearch:
+  type: object
+  properties:
+    city:
+      type: string
+    coupon:
+      type: string
 Category:
   type: object
   properties:

@@ -458,13 +458,13 @@ paths:
               type: object
   /postgres/restaurant/search:
     post:
-      summary: Fetch multiple Restaurant pavan
+      summary: Fetch multiple Restaurants
       description: Fetch multiple Restaurant from database
       requestBody:
         content:
           application/json:
             schema:
-              type: object
+              $ref: "#/definitions/postgres/RestaurantSearch"
       responses:
         content:
           application/json:
@@ -509,6 +509,13 @@ definitions:
           type: string
           nullable: true
         location:
+          type: string
+    RestaurantSearch:
+      type: object
+      properties:
+        city:
+          type: string
+        coupon:
           type: string
     Category:
       type: object
